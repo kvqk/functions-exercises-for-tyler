@@ -87,7 +87,18 @@ console.log(checkNumber(90))
 // In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n.
 //  In simple terms, the Factorial of 7 is solved like this:
 // 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 5,040
-function 
+const factorialOf = integer => {
+  let factorial = 1;
+
+  for(let i = 1; i <= integer; i++) {
+    factorial *= i;
+  }
+
+  return factorial;
+}
+console.log(factorialOf(9))
+console.log(factorialOf(10))
+console.log(factorialOf(5))
 
 // Example:
 // > console.log(factorializer(7));
@@ -96,6 +107,18 @@ function
 // Exercise 3
 // Identify if a number is Odd or Even?
 // A function that lets you know if a number is Even or Odd
+function oddOrEven(numberr){
+  if (oddOrEven % 2 == 0){
+    console.log("this number is even")
+  }
+  else {
+    console.log("this number is odd")
+  }
+    
+}
+console.log(oddOrEven(2));
+
+
 
 // Example:
 // > console.log(oddOrEven(7));
