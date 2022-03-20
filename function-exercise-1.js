@@ -80,25 +80,25 @@ function checkNumber(input) {
     return "given input number/value";
   }
 }
-console.log(checkNumber(90))
+console.log(checkNumber(90));
 
 // Exercise 2
 
 // In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n.
 //  In simple terms, the Factorial of 7 is solved like this:
 // 7 _ 6 _ 5 _ 4 _ 3 _ 2 _ 1 = 5,040
-const factorialOf = integer => {
+const factorialOf = (integer) => {
   let factorial = 1;
 
-  for(let i = 1; i <= integer; i++) {
+  for (let i = 1; i <= integer; i++) {
     factorial *= i;
   }
 
   return factorial;
-}
-console.log(factorialOf(9))
-console.log(factorialOf(10))
-console.log(factorialOf(5))
+};
+console.log(factorialOf(9));
+console.log(factorialOf(10));
+console.log(factorialOf(5));
 
 // Example:
 // > console.log(factorializer(7));
@@ -107,18 +107,14 @@ console.log(factorialOf(5))
 // Exercise 3
 // Identify if a number is Odd or Even?
 // A function that lets you know if a number is Even or Odd
-function oddOrEven(numberr){
-  if (oddOrEven % 2 == 0){
-    console.log("this number is even")
+function oddOrEven(numberr) {
+  if (oddOrEven % 2 == 0) {
+    console.log("this number is even");
+  } else {
+    console.log("this number is odd");
   }
-  else {
-    console.log("this number is odd")
-  }
-    
 }
 console.log(oddOrEven(2));
-
-
 
 // Example:
 // > console.log(oddOrEven(7));
@@ -127,6 +123,16 @@ console.log(oddOrEven(2));
 // Exercise 4
 
 // Return the sum of a number going back to it's root. In other words, the function will work like this:
+const addUp = (root) => {
+  let numb3r = 1;
+
+  for (let i = 1; i <= root; i++) {
+    numb3r += i;
+  }
+
+  return numb3r;
+};
+console.log(addUp(5));
 
 // addUp(5);
 // 5 + 4 + 3 + 2 + 1 + 0 = 15
@@ -139,6 +145,14 @@ console.log(oddOrEven(2));
 // Create a function  that takes a string as argument and returns true if a string is empty and false otherwise.
 // isEmpty(“ ”)➞ true
 // isEmpty(“Chaima”)➞ false
+function isEmpty(string) {
+  if (string === "hello") {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
+console.log(isEmpty(""));
 
 // Exercise 6
 
@@ -155,6 +169,14 @@ console.log(oddOrEven(2));
 // oneDevideByTwo(9,3)➞true
 // oneDevideByTwo(10,2)➞true
 // oneDevideByTwo(13,2)➞false
+function oneDevideByTwo(a, b) {
+  if (a % b === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(oneDevideByTwo(10, 2));
 
 // Exercise 8
 
@@ -162,18 +184,46 @@ console.log(oddOrEven(2));
 // "Today, I am feeling {mood}". However, if no argument is passed, return "Today, I am feeling neuter".
 // moodToday("happy") ➞ "Today, I am feeling happy"
 // moodToday( ) ➞ "Today, I am feeling neuter"
-
+function moodToday(string) {
+  if (string.length == 0) {
+    return "today i am feeling neutueral";
+  } else {
+    return `today i am feeling ${string}`;
+  }
+}
+console.log(moodToday(""));
 // Exercise 9
 
 // Write a function that validates whether two strings are identical. Make it case insensitive.
 // match(“HELLO WORLD”) and (”hello world”) → true
 // match("mask", "mAskinG") ➞ false
+function match(a, b) {
+  if (a.toLowerCase() == b.toLowerCase()) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+console.log(match("Hello World", "hello world"));
 
 // Exercise 10
 
 // Create a function that takes a string as argument and returns "upper" if all the letters in a word are uppercase, "lower" if lowercase and "mixed" for any mix of the two.
 // getCase("javascript..") ➞ "lower"
 // getCase("SHOUT!") ➞ "upper"
+function getCase (string) {
+  if(string == string.toUpperCase()){
+    return"upper"
+  }
+  else if (string == string.toLowerCase()){
+    return"lower"
+  }
+  else {
+    return"mixed"
+  }
+}  
+console.log(getCase("SSSSSjgfjhf"))                
 
 // Exercise 11
 
