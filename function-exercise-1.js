@@ -212,18 +212,18 @@ console.log(match("Hello World", "hello world"));
 // Create a function that takes a string as argument and returns "upper" if all the letters in a word are uppercase, "lower" if lowercase and "mixed" for any mix of the two.
 // getCase("javascript..") ➞ "lower"
 // getCase("SHOUT!") ➞ "upper"
-function getCase (string) {
-  if(string == string.toUpperCase()){
-    return"upper"
+function getCase(string) {
+  if (string == string.toUpperCase()) {
+    return "upper"
   }
-  else if (string == string.toLowerCase()){
-    return"lower"
+  else if (string == string.toLowerCase()) {
+    return "lower"
   }
   else {
-    return"mixed"
+    return "mixed"
   }
-}  
-console.log(getCase("SSSSSjgfjhf"))                
+}
+console.log(getCase("SSSSSjgfjhf"))
 
 // Exercise 11
 
@@ -236,9 +236,44 @@ console.log(getCase("SSSSSjgfjhf"))
 // Create a function that takes a string and returns a string with its letters in alphabetical order.
 // AlphabetSoup("javascript") ➞ "aacijprstv"
 // AlphabetSoup(“simplon”) ➞”ilmnops”
+function alphabetSoup(string){
+return string.split("").sort().join("").   
+
+}
+console.log(alphabetSoup("javascript"))
+/**split is splitting the letters of the word, for example "hello" its gonna turn out like 'h','e','l,'l,'o,' 
+ * sort is putting the 'h','e','l,'l,'o,'  in alphabetical order
+ * join gets rid of the quotations and the ","
+*/
+
+
+
+
 
 // Exercise 13
 
 // Create a function that takes a number as argument and returns the incrementing (+1) for each odd number and decrementing (-1) for each even number.
 // incrementOrDecrement(5) ➞4
 // incrementOrDecrement(2) ➞3
+function incrementOrDecrement(number) {
+  let changingNumber
+  if (number % 2 === 0) {
+    changingNumber = number - 1
+  }
+  else {
+    changingNumber = number + 1
+  }
+  return changingNumber
+}
+console.log(incrementOrDecrement(6))
+
+
+
+
+
+
+
+
+
+
+
