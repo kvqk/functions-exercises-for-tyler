@@ -230,6 +230,16 @@ console.log(getCase("SSSSSjgfjhf"))
 // Create a function that takes  a string as argument (of a person’s first and last name) and returns a string with the first and last name swapped.
 // swapName("Ada Lovelace") ➞ "Lovelace Ada"
 // swapName(“Alan Turing”)➞  “Turing Alan”
+function swapName(string){
+  let newArray = [] /*this is declaring variable [] emtey array */
+  let arrayNames = string.split(" ")/*this is also declaring varibale and giving value, "string.split"splitting the 2 words and turning into array */
+  newArray[0] = arrayNames[1]/*making 'tyler' to the place of "zolzaya" */
+  newArray[1] = arrayNames[0]/*making zolzaya to the place of tyler */
+  return newArray.join(" ")/*join turns array into string */
+  
+}
+console.log(swapName("tyler zolzaya"))
+
 
 // Exercise 12
 
@@ -237,7 +247,7 @@ console.log(getCase("SSSSSjgfjhf"))
 // AlphabetSoup("javascript") ➞ "aacijprstv"
 // AlphabetSoup(“simplon”) ➞”ilmnops”
 function alphabetSoup(string){
-return string.split("").sort().join("").   
+return string.split("").sort().join("") 
 
 }
 console.log(alphabetSoup("javascript"))

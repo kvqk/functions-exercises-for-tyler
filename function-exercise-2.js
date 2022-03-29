@@ -76,6 +76,29 @@ console.log(splitAmount("fair", 30, 8));
 //
 // Useful resource:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+function isVowel(character){
+	let text;
+    let vowels = (['a', 'e', 'i', 'o', 'u']);
+
+    for (let i = 0; i <= vowels.length; i++){
+        if (character != vowels[i]) {
+            continue;
+        }
+        return true;
+    }
+    return false;
+}
+
+// See if "A" is a vowel
+var char = "A";
+
+if (isVowel(char)) {
+	console.log(char + " is a vowel");
+} else {
+	console.log(char + " is not a vowel");
+}
+
+
 //
 // Examples:
 // isVowel('c') --> false
@@ -94,6 +117,7 @@ console.log(splitAmount("fair", 30, 8));
 // rockPaperScissors('rock', 'scissors') --> 'player 1'
 // rockPaperScissors('rock', 'paper') --> 'player 2'
 // rockPaperScissors('paper', 'paper') --> 'draw'
+function rockPaperScissors
 
 // Exercise 6
 
