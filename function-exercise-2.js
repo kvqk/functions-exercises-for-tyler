@@ -188,10 +188,10 @@ console.log(numberJoinerFancy(1, 5))
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "reverse" that computes the reversal of a string.
 //
-function reverseString(str) {
+function reverse(str) {
   return str;
 }
-reverseString("OLLEH");
+reverse("OLLEH");
 // Example:
 // reverse("skoob") --> "books"
 
