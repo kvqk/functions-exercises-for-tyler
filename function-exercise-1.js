@@ -231,7 +231,7 @@ console.log(getCase("SSSSSjgfjhf"))
 // swapName("Ada Lovelace") ➞ "Lovelace Ada"
 // swapName(“Alan Turing”)➞  “Turing Alan”
 function swapName(string){
-  let newArray = [] /*this is declaring variable [] emtey array */
+  let newArray = [] /*this is declaring variable [] emptey array */
   let arrayNames = string.split(" ")/*this is also declaring varibale and giving value, "string.split"splitting the 2 words and turning into array */
   newArray[0] = arrayNames[1]/*making 'tyler' to the place of "zolzaya" */
   newArray[1] = arrayNames[0]/*making zolzaya to the place of tyler */

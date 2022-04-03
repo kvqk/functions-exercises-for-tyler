@@ -25,8 +25,8 @@ function tipAmount(totalAmount, service) {
 console.log(tipAmount(50, "good"));
 console.log(tipAmount(6, "poor"));
 console.log(tipAmount(15, "fair"));
-console.log(tipAmount(80, "good"))
-console.log(tipAmoumt(3, "poor"))
+console.log(tipAmount(80, "good"));
+console.log(tipAmount(3, "poor"));
 // Exercise 2
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,9 +43,9 @@ function totalAmount(amount, service) {
 }
 console.log(totalAmount(100, "good"));
 console.log(totalAmount(50, "fair"));
-console.log(totalAmount(10, "poor"))
-console.log(totalAmount(300, "good"))
-console.log(totalAmount(1, "poor"))
+console.log(totalAmount(10, "poor"));
+console.log(totalAmount(300, "good"));
+console.log(totalAmount(1, "poor"));
 
 // Exercise 3
 
@@ -76,28 +76,27 @@ console.log(splitAmount("fair", 30, 8));
 //
 // Useful resource:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-function isVowel(character){
-	let text;
-    let vowels = (['a', 'e', 'i', 'o', 'u']);
+function isVowel(character) {
+  let text;
+  let vowels = ["a", "e", "i", "o", "u"];
 
-    for (let i = 0; i <= vowels.length; i++){
-        if (character != vowels[i]) {
-            continue;
-        }
-        return true;
+  for (let i = 0; i <= vowels.length; i++) {
+    if (character != vowels[i]) {
+      continue;
     }
-    return false;
+    return true;
+  }
+  return false;
 }
 
 // See if "A" is a vowel
-var char = "A";
+// var char = "A";
 
-if (isVowel(char)) {
-	console.log(char + " is a vowel");
-} else {
-	console.log(char + " is not a vowel");
-}
-
+// if (isVowel(char)) {
+//   console.log(char + " is a vowel");
+// } else {
+//   console.log(char + " is not a vowel");
+// }
 
 //
 // Examples:
@@ -117,7 +116,28 @@ if (isVowel(char)) {
 // rockPaperScissors('rock', 'scissors') --> 'player 1'
 // rockPaperScissors('rock', 'paper') --> 'player 2'
 // rockPaperScissors('paper', 'paper') --> 'draw'
-function rockPaperScissors
+const rock = "rock";
+const paper = "paper";
+const scissors = "scissors";
+function rockPaperScissors(player1, player2) {
+  console.log(player1);
+  if (player1 === "rock" && player2 === "paper") {
+    return "player2 wins";
+  } else if (player1 === rock && player2 === scissors) {
+    return "player1 wins";
+  } else if (player1 === paper && player2 === scissors) {
+    return "player 2 wins";
+  } else if (player1 === paper && player2 === rock) {
+    return "player 1 wins";
+  } else if (player1 === scissors && player2 === rock) {
+    return "player 2 wins";
+  } else if (player1 === scissors && player2 === paper) {
+    return " player 1 wins";
+  } else {
+    return "draw";
+  }
+}
+console.log(rockPaperScissors("scissors", "scissors"));
 
 // Exercise 6
 
@@ -127,7 +147,17 @@ function rockPaperScissors
 // Examples:
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
+function numberJoinerWhile(startingNumber, endingNumber) {
+  let array = []
+  for (let i = startingNumber; i <= endingNumber;i++){
+    array.push(i)
+  }
+  return array.join("_")
 
+  
+
+}
+console.log(numberJoinerWhile(1, 10))
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
@@ -140,14 +170,31 @@ function rockPaperScissors
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+function numberJoinerFancy(startingNumber, endingNumber) {
+  let array = []
+  for (let i = startingNumber; i <= endingNumber;i++){
+    array.push(i)
+  }
+  return array.join("***")
+
+  
+
+}
+console.log(numberJoinerFancy(1, 5))
+
 
 // Exercise 7
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "reverse" that computes the reversal of a string.
 //
+function reverseString(str) {
+  return str;
+}
+reverseString("OLLEH");
 // Example:
 // reverse("skoob") --> "books"
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "findLongestWord" that takes a string of words and returns
