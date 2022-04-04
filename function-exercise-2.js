@@ -204,6 +204,7 @@ reverse("OLLEH");
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
 
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "nicer"
 // It should clean up the language in its input sentence.
@@ -234,6 +235,17 @@ reverse("OLLEH");
 // split('a-b-c', '-') --> ['a', 'b', 'c']
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
+function split(a, b) {
+  let array = []
+  for (let i = a; i <= b;i++){
+    array.push(i)
+  }
+  return array.join("***")
+
+  
+
+}
+console.log(split("APPLE", "banana", "CHERRY" ))
 
 // Exercise 9
 
@@ -258,11 +270,35 @@ reverse("OLLEH");
 // Write a function "evens" which takes an array of numbers and returns a new
 // array containing only the even numbers in the given array.
 // Hint: you may want to re-use your "isEven" function from 01-predicate-functions.js
+function even (array){
+  let newArray = []
+  for (let i = 0; i <= array.length; i++){
+    if (array[i] % 2 === 0){
+      newArray.push(array[i]);
+    
+    }
+  }
+  return newArray
+}
+console.log(1, 3, 5, 7)
+
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "odds" which takes an array of numbers and returns a new
 // array containing only the odd numbers in the given array.
 // Hint: you may want to re-use your "isOdd" function from 01-predicate-functions.js
+function odds (aray){
+  let newArray = []
+  for (let i = 0; i <= aray.length; i--){
+    if (aray[i] % 2 === 0){
+      newArray.push(aray[i]);
+    
+    }
+  }
+  return newArray
+}
+console.log(1, 3, 5, 7)
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "integers" which takes an array of numbers and returns a new
